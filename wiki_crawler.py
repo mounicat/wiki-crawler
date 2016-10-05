@@ -97,7 +97,7 @@ url_str = "none"
 for str1 in items:
 	i = i+1
 	str2 = "https://en.wikipedia.org/w/index.php?title=Special:WhatLinksHere/"
-	str3 = str2 + str1 + "&limit=5000000000000000000000000000000000000000000000"
+	str3 = str2 + str1 + "&limit=sys.maxint"
 	try:
             response = etree.HTML(urllib2.urlopen(str3).read())
         except (httplib.HTTPException, httplib.IncompleteRead, urllib2.URLError):
